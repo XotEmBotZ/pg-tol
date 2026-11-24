@@ -1,0 +1,16 @@
+{
+  "name": "pg-tol",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PostgreSQL Training, Oversight & Learning Platform",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "docker compose up --build",
+    "down": "docker compose down",
+    "db:connect": "docker compose exec postgres psql -U faculty_admin -d lab_db",
+    "dashboard:dev": "bun --cwd apps/faculty-dashboard dev"
+  },
+  "packageManager": "bun@1.4.5"
+}
